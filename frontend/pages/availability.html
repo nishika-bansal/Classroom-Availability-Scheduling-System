@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Classroom Availability</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body style="font-family: Arial; text-align: center;">
+
+<h2>Classroom Availability</h2>
+
+<input type="text" id="room_id" placeholder="Room Number"><br><br>
+<input type="date" id="date"><br><br>
+<input type="time" id="start_time"><br><br>
+<input type="time" id="end_time"><br><br>
+
+<!-- 🔥 BUTTONS -->
+<button id="checkBtn">Check Availability</button>
+<button id="showBtn">Show Schedule</button>
+
+<br><br>
+
+<table border="1" align="center">
+    <thead>
+        <tr>
+            <th>Room Number</th>
+            <th>Course</th>
+            <th>Faculty</th>
+            <th>Date</th>
+            <th>Time</th>
+        </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+</table>
+
+<br>
+
+<button onclick="goBack()">Back</button>
+
+<!-- ✅ JS -->
+<script src="../js/availability.js"></script>
+
+<!-- 🔥 FIX: JS LOAD hone ke baad event bind -->
+<script>
+document.getElementById("checkBtn").addEventListener("click", checkAvailability);
+document.getElementById("showBtn").addEventListener("click", loadAvailability);
+
+function goBack() {
+    window.location.href = "../dashboard.html";
+}
+</script>
+
+</body>
+</html>

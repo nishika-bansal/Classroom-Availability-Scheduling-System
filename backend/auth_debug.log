@@ -1,0 +1,36 @@
+LOGIN ATTEMPT: {'username': 'admin', 'password': 'admin'}
+LOGIN RESULT: None
+LOGIN ATTEMPT: {'username': 'admin', 'password': 'admin123'}
+LOGIN RESULT: None
+LOGIN ATTEMPT: {'username': 'admin', 'password': '1234'}
+LOGIN RESULT: None
+LOGIN ATTEMPT: {'username': 'admin', 'password': '1234'}
+LOGIN RESULT: {'id': 1, 'username': 'admin', 'role': 'admin'}
+LOGIN ATTEMPT: {'username': 'admin', 'password': '1234'}
+LOGIN RESULT: {'id': 1, 'username': 'admin', 'role': 'admin'}
+LOGIN ATTEMPT: {'username': 'admin', 'password': '1234'}
+LOGIN RESULT: {'id': 1, 'username': 'admin', 'role': 'admin'}
+LOGIN ATTEMPT: {'username': 'admin', 'password': '1234'}
+LOGIN RESULT: {'id': 1, 'username': 'admin', 'role': 'admin'}
+LOGIN ATTEMPT: {'username': 'admin', 'password': '1234'}
+LOGIN RESULT: {'id': 1, 'username': 'admin', 'role': 'admin'}
+LOGIN ATTEMPT: {'username': 'admin', 'password': '1234'}
+LOGIN RESULT: {'id': 1, 'username': 'admin', 'role': 'admin'}
+LOGIN ATTEMPT: {'username': 'admin', 'password': '1234'}
+LOGIN RESULT: {'id': 1, 'username': 'admin', 'role': 'admin'}
+LOGIN ATTEMPT: {'username': 'admin', 'password': '1234'}
+LOGIN RESULT: {'id': 1, 'username': 'admin', 'role': 'admin'}
+LOGIN ATTEMPT: {'username': 'admin', 'password': '1234'}
+LOGIN RESULT: {'id': 1, 'username': 'admin', 'role': 'admin'}
+LOGIN ATTEMPT: {'username': 'admin', 'password': '1234'}
+LOGIN RESULT: {'id': 1, 'username': 'admin', 'role': 'admin'}
+LOGIN ATTEMPT: {'username': 'admin', 'password': '1234'}
+LOGIN RESULT: {'id': 1, 'username': 'admin', 'role': 'admin'}
+LOGIN ATTEMPT: {'username': 'admin', 'password': '1234'}
+LOGIN RESULT: {'id': 1, 'username': 'admin', 'role': 'admin'}
+LOGIN ATTEMPT: {'username': 'admin', 'password': '1234'}
+LOGIN RESULT: {'id': 1, 'username': 'admin', 'role': 'admin'}
+LOGIN ATTEMPT: {'username': 'admin', 'password': '1234'}
+LOGIN RESULT: {'id': 1, 'username': 'admin', 'role': 'admin'}
+LOGIN ATTEMPT: {'username': 'admin', 'password': '1234'}
+LOGIN RESULT: {'id': 1, 'username': 'admin', 'role': 'admin'}

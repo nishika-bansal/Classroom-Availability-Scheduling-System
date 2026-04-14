@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Classrooms</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<h2><i class="fa-solid fa-building"></i> All Classrooms</h2>
+
+<button onclick="loadClassrooms()">
+    <i class="fa-solid fa-arrows-rotate"></i> Load Classrooms
+</button>
+
+<br><br>
+
+<table border="1" cellpadding="10">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Room Number</th>
+            <th>Capacity</th>
+            <th>Type</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody id="tableBody">
+        <!-- Data will come here -->
+    </tbody>
+</table>
+
+<br>
+
+<button onclick="goBack()">
+    <i class="fa-solid fa-arrow-left"></i> Back
+</button>
+
+<!-- JS FILE -->
+<script src="../js/view_classroom.js"></script>
+
+<script>
+    // auto load on page open
+    loadClassrooms();
+
+    function goBack() {
+        window.location.href = "../dashboard.html";
+    }
+</script>
+
+</body>
+</html>

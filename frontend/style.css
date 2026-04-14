@@ -1,0 +1,408 @@
+/* ========================================================
+   FONT
+======================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+/* Remove spacing caused by <br> */
+br {
+    display: none;
+}
+
+/* ========================================================
+   RESET
+======================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+
+    background: linear-gradient(160deg, #0b1120, #020617);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 40px 20px;
+    color: #e5e7eb;
+}
+
+
+/* ========================================================
+   PAGE CARD
+======================================================== */
+
+body>*:not(script) {
+    max-width: 520px;
+    width: 100%;
+}
+
+body>h2,
+body>form,
+body>table,
+body>ul {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ========================================================
+   HEADINGS
+======================================================== */
+
+h2 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-top: 18px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+
+/* ========================================================
+   INPUTS
+======================================================== */
+
+input {
+    width: 100%;
+    padding: 12px 14px;
+
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    background: rgba(255, 255, 255, 0.05);
+
+    color: white;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 14px;
+
+    transition: 0.25s;
+}
+
+input::placeholder {
+    color: #94a3b8;
+}
+
+input:focus {
+    outline: none;
+
+    border-color: #3b82f6;
+
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, .25);
+}
+
+/* ===============================
+   SIDEBAR
+================================ */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    height: 100%;
+    width: 220px;
+    padding: 25px 18px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    backdrop-filter: blur(12px);
+
+    border-right: 1px solid rgba(255, 255, 255, .08);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 18px;
+
+}
+.sidebar .dashlogo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.sidebar .dashlogo i{
+    font-size: 40px;
+
+}
+
+/* sidebar title */
+
+.sidebar h2 {
+
+    font-size: 20px;
+
+    margin-bottom: 20px;
+
+}
+
+/* links */
+
+.sidebar a {
+
+    text-decoration: none;
+
+    color: #e5e7eb;
+    width: 100%;
+    max-width: 220px;
+
+    padding: 7px 12px;
+
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    transition: .2s;
+
+}
+.sidebar span{
+    width: 100%;
+    text-align: left;
+    margin-left: 10px;
+}
+
+/* hover */
+
+.sidebar a:hover {
+
+    background: rgba(255, 255, 255, .1);
+
+}
+
+/* ========================================================
+   BUTTONS
+======================================================== */
+
+/* ===============================
+   BUTTONS — GLASS STYLE
+================================ */
+
+button {
+
+    background: rgba(255, 255, 255, 0.06);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    color: #e5e7eb;
+
+    padding: 10px 16px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    backdrop-filter: blur(8px);
+
+    transition: all .25s ease;
+
+    margin-top: 8px;
+}
+
+/* hover */
+
+button:hover {
+
+    background: rgba(255, 255, 255, 0.12);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .45);
+
+}
+
+/* active */
+
+button:active {
+
+    transform: scale(.96);
+
+}
+
+/* logout button */
+
+button.logout {
+
+    background: rgba(185, 28, 28, 0.25);
+    border: 1px solid rgba(185, 28, 28, .4);
+}
+
+button.logout:hover {
+
+    background: rgba(185, 28, 28, .35);
+
+}
+
+
+
+
+/* ========================================================
+   MESSAGE
+======================================================== */
+
+#message {
+    margin-top: 12px;
+    font-weight: 500;
+    color: #facc15;
+}
+
+
+/* ========================================================
+   TABLE
+======================================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+thead {
+    background: rgba(255, 255, 255, .1);
+}
+
+th {
+    padding: 12px;
+    font-weight: 500;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, .08);
+}
+
+tbody tr:hover {
+    background: rgba(255, 255, 255, .05);
+}
+
+
+/* ========================================================
+   LIST
+======================================================== */
+
+ul {
+    list-style: none;
+    margin-top: 12px;
+}
+
+ul li {
+    padding: 12px;
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-bottom: 18px;
+}
+
+/* Font Awesome icon spacing */
+
+button i,
+h2 i,
+h3 i {
+    margin-right: 8px;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ========================================================
+   DIVIDER
+======================================================== */
+
+hr {
+    border: none;
+    height: 1px;
+    margin: 25px 0;
+
+    background: linear-gradient(to right,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent);
+}
+
+form {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+
+    padding: 25px;
+    border-radius: 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .5);
+}
+
+
+/*------------------------------------------*/
+.sec {
+    padding: 14px 0 0 0;
+}
+
+.sec>* {
+    width: 100%;
+
+}
+
+.sidebar.hide{
+    transform: translate(-100%,0);
+}
+
+
+
+
+/* ========================================================
+   RESPONSIVE
+======================================================== */
+
+@media(max-width:650px) {
+
+    body {
+        padding: 25px 15px;
+    }
+
+    button {
+        width: 100%;
+        justify-content: center;
+    }
+
+}

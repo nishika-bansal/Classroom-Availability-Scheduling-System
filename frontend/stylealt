@@ -1,0 +1,82 @@
+/* Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+}
+
+/* Headings */
+h2 {
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Center container */
+body {
+    text-align: center;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Forms */
+form {
+    background-color: white;
+    padding: 20px;
+    margin: auto;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Input fields */
+input {
+    width: 90%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Table */
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Table header */
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Table cells */
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Message text */
+#message {
+    margin-top: 10px;
+    font-weight: bold;
+    color: green;
+}

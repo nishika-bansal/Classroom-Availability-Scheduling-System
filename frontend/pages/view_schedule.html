@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Schedule</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<!-- ✅ AUTO LOAD FUNCTION -->
+<body onload="loadSchedules()">
+
+<h2>All Scheduled Lectures</h2>
+
+<br>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Room Number</th>
+            <th>Course</th>
+            <th>Faculty</th>
+            <th>Date</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+        </tr>
+    </thead>
+
+    <tbody id="tableBody"></tbody>
+</table>
+
+<br>
+
+<button onclick="goBack()">Back</button>
+
+<!-- ✅ LINK JS FILE -->
+<script src="../js/view_schedule.js"></script>
+
+<script>
+function goBack() {
+    window.location.href = "../dashboard.html";
+}
+</script>
+
+</body>
+</html>

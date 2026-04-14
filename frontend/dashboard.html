@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="head">
+        <h2>
+            <i class="fa-solid fa-gauge-high"></i>
+            <span id="dashboardTitle">Dashboard</span>
+        </h2>
+    </div>
+
+    <!-- ✅ MAIN SECTIONS -->
+    <div class="sec" id="classroomSection">
+        <h3><i class="fa-solid fa-school"></i> Classroom</h3>
+        <button onclick="goToAddClassroom()">
+            <i class="fa-solid fa-plus"></i> Add
+        </button>
+        <button onclick="window.location='pages/view_classroom.html'">
+            <i class="fa-solid fa-eye"></i> View
+        </button>
+    </div>
+
+    <div class="sec" id="scheduleSection">
+        <h3><i class="fa-solid fa-calendar-days"></i> Schedule</h3>
+        <button onclick="goToSchedule()">
+            <i class="fa-solid fa-plus"></i> Add
+        </button>
+        <button onclick="window.location='pages/view_schedule.html'">
+            <i class="fa-solid fa-list"></i> View
+        </button>
+    </div>
+
+    <div class="sec" id="availabilitySection">
+        <h3><i class="fa-solid fa-clock"></i> Availability</h3>
+        <button onclick="goToAvailability()">
+            <i class="fa-solid fa-magnifying-glass"></i> Check
+        </button>
+    </div>
+
+    <!-- ✅ LOGOUT -->
+    <button onclick="logout()">
+        <i class="fa-solid fa-right-from-bracket"></i> Logout
+    </button>
+
+    <!-- ✅ SIDEBAR -->
+    <div class="sidebar">
+
+        <h2 class="dashlogo">
+            <i class="fa-solid fa-building-columns"></i>
+            <span>Graphic Era University</span>
+        </h2>
+
+        <a href="dashboard.html">
+            <i class="fa-solid fa-gauge"></i><span> Dashboard</span>
+        </a>
+
+        <!-- ✅ ADMIN ONLY -->
+        <a href="pages/add_classroom.html" id="sidebarAddClassroom">
+            <i class="fa-solid fa-door-open"></i><span> Add Classroom</span>
+        </a>
+
+        <a href="pages/view_classroom.html" id="sidebarViewClassroom">
+            <i class="fa-solid fa-school"></i><span> View Classrooms</span>
+        </a>
+
+        <!-- ✅ COMMON -->
+        <a href="pages/add_schedule.html">
+            <i class="fa-solid fa-calendar-plus"></i><span> Schedule</span>
+        </a>
+
+        <a href="pages/availability.html">
+            <i class="fa-solid fa-clock"></i><span> Availability</span>
+        </a>
+
+    </div>
+
+    <!-- ✅ SCRIPT -->
+    <script>
+        window.addEventListener('load', function () {
+
+            // ✅ GET USER OBJECT (BEST PRACTICE)
+            const user = JSON.parse(localStorage.getItem("user"));
+
+            if (!user) {
+                alert("Please login first ❌");
+                window.location.href = "index.html";
+                return;
+            }
+
+            console.log("Logged in as:", user.role);
+
+            // ✅ SET TITLE
+            const titleText = user.role === "admin"
+                ? "Admin Dashboard"
+                : "Faculty Dashboard";
+
+            document.getElementById("dashboardTitle").textContent = titleText;
+
+            // ✅ ROLE BASED UI
+            if (user.role === "faculty") {
+
+                // ❌ Hide classroom section
+                document.getElementById("classroomSection").style.display = "none";
+
+                // ❌ Hide sidebar classroom links
+                document.getElementById("sidebarAddClassroom").style.display = "none";
+                document.getElementById("sidebarViewClassroom").style.display = "none";
+            }
+
+        });
+
+        function goToAddClassroom() {
+            window.location.href = "pages/add_classroom.html";
+        }
+
+        function goToSchedule() {
+            window.location.href = "pages/add_schedule.html";
+        }
+
+        function goToAvailability() {
+            window.location.href = "pages/availability.html";
+        }
+
+        function logout() {
+            localStorage.clear();   // ✅ clean logout
+            alert("Logged out successfully ✅");
+            window.location.href = "index.html";
+        }
+    </script>
+
+</body>
+
+</html>

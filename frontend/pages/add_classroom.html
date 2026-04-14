@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Classroom</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <h2><i class="fa-solid fa-door-open"></i>   Add Classroom</h2>
+
+    <input type="text" id="room_number" placeholder="Room Number"><br><br>
+    <input type="number" id="capacity" placeholder="Capacity"><br><br>
+    <input type="text" id="room_type" placeholder="Room Type"><br><br>
+
+    <button onclick="addClassroom()"><i class="fa-solid fa-plus"></i>Add Classroom</button>
+
+    <p id="message"></p>
+
+    <hr>
+
+    <h3>All Classrooms</h3>
+    <button onclick="loadClassrooms()"><i class="fa-solid fa-arrows-rotate"></i>Load Classrooms</button>
+
+     <ul id="classroomList"></ul>
+
+    <script src="../js/classroom.js"></script>
+
+</body>
+</html>
