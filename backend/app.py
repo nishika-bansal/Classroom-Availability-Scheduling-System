@@ -98,5 +98,9 @@ def index():
 
 
 # ✅ RUN APP
-if __name__ == '__main__':
-    app.run(debug=True, port=5001)
+if __name__ == "__main__":
+    import os
+    port = int(os.environ.get("PORT", 5000))
+    # init_db()  # ❌ remove from here
+    # create_test_user()  # ❌ remove from here
+    app.run(host="0.0.0.0", port=port)
